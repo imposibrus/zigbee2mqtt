@@ -1,0 +1,23 @@
+homeassistant: true
+permit_join: false
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://192.168.88.104
+  user: '!secret mqtt_user'
+  password: '!secret mqtt_password'
+serial:
+  port: /dev/ttyACM0
+advanced:
+  network_key: '!secret network_key'
+  log_level: debug
+  log_output:
+    - console
+  homeassistant_legacy_entity_attributes: false
+  legacy_api: false
+frontend:
+  port: 8080
+  host: 0.0.0.0
+  auth_token: '!secret frontend_auth_token'
+device_options:
+  legacy: false
+devices: devices.yaml

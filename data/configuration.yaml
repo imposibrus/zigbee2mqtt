@@ -21,3 +21,4 @@ frontend:
 device_options:
   legacy: false
 devices: devices.yaml
+groups: {}

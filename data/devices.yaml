@@ -4,5 +4,9 @@
   friendly_name: plug_livingroom
 '0x00124b0025127f59':
   friendly_name: dd_larder
+'0xa4c138f972d10fc3':
+  friendly_name: light_wardrobe
+'0xa4c1387060266200':
+  friendly_name: light_larder
 '0x00124b002512c774':
   friendly_name: dd_wardrobe

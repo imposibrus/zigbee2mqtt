@@ -2,11 +2,16 @@
   friendly_name: do_fridge
 '0x00158d00025863b3':
   friendly_name: plug_livingroom
-'0x00124b0025127f59':
-  friendly_name: dd_larder
 '0xa4c138f972d10fc3':
   friendly_name: light_wardrobe
 '0xa4c1387060266200':
   friendly_name: light_larder
 '0x00124b002512c774':
   friendly_name: dd_wardrobe
+'0x00124b0025127f59':
+  friendly_name: dd_larder
+'0x00124b0024fffb48':
+  friendly_name: button_snzb
+'0x00158d00070822b3':
+  friendly_name: magic_cube
+  legacy: false

@@ -1,4 +1,5 @@
-homeassistant: true
+homeassistant:
+  legacy_entity_attributes: true
 permit_join: false
 mqtt:
   base_topic: zigbee2mqtt
@@ -14,6 +15,17 @@ advanced:
     - console
   homeassistant_legacy_entity_attributes: false
   legacy_api: false
+  log_syslog:
+    app_name: Zigbee2MQTT
+    eol: /n
+    host: localhost
+    localhost: localhost
+    path: /dev/log
+    pid: process.pid
+    port: 123
+    protocol: tcp4
+    type: '5424'
+  last_seen: ISO_8601
 frontend:
   port: 8080
   host: 0.0.0.0
@@ -22,3 +34,8 @@ device_options:
   legacy: false
 devices: devices.yaml
 groups: {}
+availability:
+  active:
+    timeout: 10
+  passive:
+    timeout: 360

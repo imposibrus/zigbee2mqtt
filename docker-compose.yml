@@ -9,10 +9,14 @@ services:
     devices:
       - /dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B001CD44328-if00:/dev/ttyACM0
     restart: always
-    ports:
-      - 8082:8080
-#    network_mode: host
     privileged: true
     environment:
       - TZ=Europe/Moscow
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.zigbee2mqtt.rule=Host(`$DOMAIN`)"
+      - "traefik.http.routers.zigbee2mqtt-secure.rule=Host(`$DOMAIN`)"
+      - "traefik.http.routers.zigbee2mqtt-secure.tls.certresolver=default"
+      - "traefik.http.routers.zigbee2mqtt-secure.service=zigbee2mqtt"
+      - "traefik.http.services.zigbee2mqtt.loadbalancer.server.port=8080"
 
